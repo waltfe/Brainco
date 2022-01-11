@@ -1,0 +1,10 @@
+{
+  "Brainco.get_Attention_Value|block": "Attention %level",
+  "Brainco.value_level.high": "50~65",
+  "Brainco.value_level.high|block": "high",
+  "Brainco.value_level.low": "0~35",
+  "Brainco.value_level.low|block": "low",
+  "Brainco.value_level.middle": "35~50",
+  "Brainco.value_level.middle|block": "middle",
+  "{id:category}Brainco": "Brainco"
+}

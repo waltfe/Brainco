@@ -1,0 +1,10 @@
+{
+  "Brainco.get_Attention_Value|block": "专注度 %level",
+  "Brainco.value_level.high": "50~65",
+  "Brainco.value_level.high|block": "高",
+  "Brainco.value_level.low": "0~35",
+  "Brainco.value_level.low|block": "低",
+  "Brainco.value_level.middle": "35~50",
+  "Brainco.value_level.middle|block": "中",
+  "{id:category}Brainco": "Brainco"
+}
