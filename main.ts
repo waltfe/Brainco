@@ -4,22 +4,25 @@ namespace Brainco{
 
     export enum value_level{
         /**
-         * 0~35
+         * Attention greater than 35
          */
         //% block="low"
         low = 35,
         /**
-         * 35~50
+         * Attention greater than 50
          */
         //% block="middle"
         middle = 50,
         /**
-         * 50~65
+         * Attention greater than 65
          */
         //% block="high"
-        high=65
+        high = 65
     }
-
+    
+    /**
+    * Low:Attention greater than 35,Middle:Attention greater than 50,High:Attention greater than 65.
+    */
     //% block="Attention %level" blockId="GetAttentionValue"
     export function get_Attention_Value(level:value_level):boolean {
         let value = 0
@@ -42,17 +45,17 @@ namespace Brainco{
         }
         switch (level) {
             case value_level.low:
-                if (value <= value_level.low)
+                if (value > value_level.low)
                     return true
                 else
                     return false
             case value_level.middle:
-                if (value <= value_level.middle && value > value_level.low)
+                if (value > value_level.middle)
                     return true
                 else
                     return false
             case value_level.high:
-                if (value <= value_level.high && value > value_level.middle)
+                if (value > value_level.high)
                     return true
                 else
                     return false

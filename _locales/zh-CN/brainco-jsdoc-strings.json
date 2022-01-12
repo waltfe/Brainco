@@ -1,5 +1,6 @@
 {
-  "Brainco.value_level.high": "50~65",
-  "Brainco.value_level.low": "0~35",
-  "Brainco.value_level.middle": "35~50"
+  "Brainco.value_level.high": "专注度大于65",
+  "Brainco.value_level.low": "专注度大于35",
+  "Brainco.value_level.middle": "专注度大于50",
+  "Brainco.get_Attention_Value": "低：专注度大于35；中：专注度大于50；高：专注度大于65；"
 }

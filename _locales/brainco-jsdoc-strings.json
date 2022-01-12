@@ -1,5 +1,6 @@
 {
-  "Brainco.value_level.high": "50~65",
-  "Brainco.value_level.low": "0~35",
-  "Brainco.value_level.middle": "35~50"
+  "Brainco.value_level.high": "Attention greater than 65",
+  "Brainco.value_level.low": "Attention greater than 35",
+  "Brainco.value_level.middle": "Attention greater than 50",
+  "Brainco.get_Attention_Value":"Low:Attention greater than 35,Middle:Attention greater than 50,High:Attention greater than 65."
 }
