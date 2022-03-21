@@ -19,6 +19,12 @@ namespace Brainco{
         //% block="high"
         high = 65
     }
+
+    //%block="init Brainco"
+    export function initBrainco() {
+        serial.redirectToUSB()
+        serial.setBaudRate(BaudRate.BaudRate115200)
+    }
     
     /**
     * Low:Attention greater than 35,Middle:Attention greater than 50,High:Attention greater than 65.
@@ -27,8 +33,6 @@ namespace Brainco{
     export function get_Attention_Value(level:value_level):boolean {
         let value = 0
         let buffer: Buffer = null
-        serial.redirectToUSB()
-        serial.setBaudRate(BaudRate.BaudRate115200)
         buffer = serial.readBuffer(6)
         buffer = buffer.concat(serial.readBuffer(6))
         if (buffer.length > 0) {
