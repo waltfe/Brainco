@@ -6,6 +6,5 @@
   "Brainco.value_level.low|block": "low",
   "Brainco.value_level.middle": "Attention greater than 50",
   "Brainco.value_level.middle|block": "middle",
-  "Brainco.initBrainco|block": "init Brainco",
   "{id:category}Brainco": "Brainco"
 }

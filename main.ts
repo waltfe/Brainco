@@ -19,12 +19,6 @@ namespace Brainco{
         //% block="high"
         high = 65
     }
-
-    //%block="init Brainco"
-    export function initBrainco() {
-        serial.redirectToUSB()
-        serial.setBaudRate(BaudRate.BaudRate115200)
-    }
     
     /**
     * Low:Attention greater than 35,Middle:Attention greater than 50,High:Attention greater than 65.

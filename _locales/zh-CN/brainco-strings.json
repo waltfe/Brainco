@@ -6,6 +6,5 @@
   "Brainco.value_level.low|block": "低",
   "Brainco.value_level.middle": "专注度大于50",
   "Brainco.value_level.middle|block": "中",
-  "Brainco.initBrainco|block": "初始化Brainco",
   "{id:category}Brainco": "Brainco"
 }
