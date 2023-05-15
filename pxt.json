@@ -1,6 +1,6 @@
 {
     "name": "brainco",
-    "version": "0.0.7",
+    "version": "0.0.9",
     "description": "",
     "dependencies": {
         "core": "*",
