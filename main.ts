@@ -26,6 +26,7 @@ namespace Brainco{
     //% block="Attention %level" blockId="GetAttentionValue"
     export function get_Attention_Value(level:value_level):boolean {
         let value = 0
+        serial.setRxBufferSize(1)
         value = serial.readBuffer(1)[0]
 
         switch (level) {
