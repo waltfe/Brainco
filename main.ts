@@ -17,7 +17,7 @@ namespace Brainco{
     }
     
     /**
-    * Low:Attention greater than 35,Middle:Attention greater than 50,High:Attention greater than 65.
+    * Low:Attention greater than 25,High:Attention greater or equal than 75.
     */
     //% block="Attention %level" blockId="GetAttentionValue"
     export function get_Attention_Value(level:value_level):boolean {
