@@ -4,20 +4,16 @@ namespace Brainco{
 
     export enum value_level{
         /**
-         * Attention greater than 35
+         * Attention smaller than 25
          */
         //% block="low"
-        low = 35,
+        low = 1,
+
         /**
-         * Attention greater than 50
-         */
-        //% block="middle"
-        middle = 50,
-        /**
-         * Attention greater than 65
+         * Attention greater than 75
          */
         //% block="high"
-        high = 65
+        high = 2
     }
     
     /**
@@ -28,23 +24,11 @@ namespace Brainco{
         let value = 0
         serial.setRxBufferSize(1)
         value = serial.readBuffer(1)[0]
-
         switch (level) {
             case value_level.low:
-                if (value > value_level.low)
-                    return true
-                else
-                    return false
-            case value_level.middle:
-                if (value > value_level.middle)
-                    return true
-                else
-                    return false
+                return value < 25
             case value_level.high:
-                if (value > value_level.high)
-                    return true
-                else
-                    return false
+                return value >= 75
             default:
                 return false
         }
