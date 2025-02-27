@@ -14,13 +14,13 @@ namespace Brainco {
         high = 2
     }
 
-    let high_handler: () => void = null;
-    let low_handler: () => void = null;
-    let init_flag = false;
+    let high_handler: () => void = null
+    let low_handler: () => void = null
+    let init_flag = false
 
     //% block="on attention %level" blockId="onAttentionTrigger"
     export function onAttentionTrigger(level: AttentionLevel, hander: () => void) {
-        
+
         if (level == AttentionLevel.high) {
             high_handler = hander
         } else {
@@ -28,6 +28,7 @@ namespace Brainco {
         }
 
         if (!init_flag) {
+            init_flag = true
             basic.forever(() => {
                 serial.setRxBufferSize(1)
                 let buf = serial.readBuffer(1)
