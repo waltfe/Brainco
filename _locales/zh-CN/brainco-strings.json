@@ -1,6 +1,6 @@
 {
-  "Brainco.get_Attention_Value|block": "专注度 %level",
-  "Brainco.value_level.high|block": "高",
-  "Brainco.value_level.low|block": "低",
+  "Brainco.onAttentionTrigger|block": "当专注度为 %level 时",
+  "Brainco.AttentionLevel.high|block": "高",
+  "Brainco.AttentionLevel.low|block": "低",
   "{id:category}Brainco": "Brainco"
 }

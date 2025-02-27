@@ -1,3 +1,3 @@
 {
-  "Brainco.get_Attention_Value": "低：专注度小于25；高：专注度大于等于75；"
+  "Brainco.onAttentionTrigger": "低：专注度小于25；高：专注度大于等于75；"
 }
