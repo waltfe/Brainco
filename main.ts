@@ -1,6 +1,7 @@
 namespace Brainco {
 
-    export enum AttentionLevel {
+
+    export enum value_level {
         /**
          * Attention smaller than 25
          */
@@ -14,32 +15,21 @@ namespace Brainco {
         high = 2
     }
 
-    let high_handler: () => void = null
-    let low_handler: () => void = null
-    let init_flag = false
-
-    //% block="on attention %level" blockId="onAttentionTrigger"
-    export function onAttentionTrigger(level: AttentionLevel, hander: () => void) {
-
-        if (level == AttentionLevel.high) {
-            high_handler = hander
-        } else {
-            low_handler = hander
-        }
-
-        if (!init_flag) {
-            init_flag = true
-            basic.forever(() => {
-                serial.setRxBufferSize(1)
-                let buf = serial.readBuffer(1)
-                if (buf != null && buf.length > 0) {
-                    if (buf[0] < 25) {
-                        low_handler && low_handler()
-                    } else if (buf[0] > 75) {
-                        high_handler && high_handler()
-                    }
-                }
-            })
+    /**
+    * Low:Attention greater than 25,High:Attention greater or equal than 75.
+    */
+    //% block="Attention %level" blockId="GetAttentionValue"
+    export function get_Attention_Value(level: value_level): boolean {
+        let value = 0
+        serial.setRxBufferSize(1)
+        value = serial.readBuffer(1)[0]
+        switch (level) {
+            case value_level.low:
+                return value < 25
+            case value_level.high:
+                return value >= 75
+            default:
+                return false
         }
     }
 }
